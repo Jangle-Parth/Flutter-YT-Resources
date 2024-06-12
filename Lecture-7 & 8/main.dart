@@ -1,132 +1,90 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const PersonalCard());
+  runApp(const AboutApp());
 }
 
-class PersonalCard extends StatelessWidget {
-  const PersonalCard({super.key});
+class AboutApp extends StatelessWidget {
+  const AboutApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    String name = "Jangle Parth";
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
+        backgroundColor: Colors.purple[200],
         appBar: AppBar(
-          title: Text("Hello my name is $name"),
+          title: const Text('Hello, my name is Jangle Parth'),
           elevation: 10,
-          backgroundColor: Colors.deepPurple[600],
+          backgroundColor: Colors.purple[600],
         ),
         body: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: EdgeInsets.only(top: 75)),
+            Padding(padding: EdgeInsets.only(top: 60)),
             Center(
               child: CircleAvatar(
-                minRadius: 100,
+                minRadius: 125,
                 foregroundImage: AssetImage("assets/JP.jpg"),
                 backgroundColor: Colors.transparent,
               ),
             ),
             Padding(padding: EdgeInsets.only(top: 25)),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Education: ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    "Pandit Deendayal Energy University",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
-                  ),
-                  Text(
-                    "Btech in Computer Science                 2022-26",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    "Skills:",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(left: 15, top: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "App Developement",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
+                          "Pandit Deendayal Energy University          2022-26",
                         ),
                         Text(
-                          "Machine Learning",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Text(
-                          "Robotics",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
+                          "Btech in Computer Science",
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
-                    "Hobbies: ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                    "Skills: ",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(left: 15, top: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Listening to Music",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Text(
-                          "Creating Video",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Text(
-                          "Meeting new People",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                          ),
-                        ),
+                        Text("App Developement"),
+                        Text("Robotics"),
+                        Text("Machine Learning"),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Hobbies: ",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15, top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Learning New Things"),
+                        Text("Listening to Music"),
+                        Text("Teaching cool stuff"),
                       ],
                     ),
                   ),
