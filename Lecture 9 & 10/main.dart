@@ -45,31 +45,31 @@ class WallpaperApp extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        downloadImage(data1[index]);
-                      },
-                      child: Expanded(
-                        child: ClipRRect(
+                    Column(
+                      children: [
+                        ClipRRect(
                           borderRadius: BorderRadius.circular(30),
                           child: Image.asset(
                             data1[index],
                           ),
                         ),
-                      ),
+                        ElevatedButton(
+                            onPressed: () => downloadImage(data1[index]),
+                            child: const Text("Download Image")),
+                      ],
                     ),
-                    InkWell(
-                      onTap: () {
-                        downloadImage(data2[index]);
-                      },
-                      child: Expanded(
-                        child: ClipRRect(
+                    Column(
+                      children: [
+                        ClipRRect(
                           borderRadius: BorderRadius.circular(30),
                           child: Image.asset(
                             data2[index],
                           ),
                         ),
-                      ),
+                        ElevatedButton(
+                            onPressed: () => downloadImage(data2[index]),
+                            child: const Text("Download Image")),
+                      ],
                     ),
                   ],
                 ),
